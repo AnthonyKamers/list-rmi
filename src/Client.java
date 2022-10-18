@@ -6,13 +6,13 @@ import java.util.Scanner;
 
 public class Client {
     Scanner in;
-    ListInterface<Integer> list;
+    ListInterface list;
 
     public Client() {
         in = new Scanner(System.in);
 
         try {
-            list = (ListInterface<Integer>) Naming.lookup("rmi://127.0.0.1/ListRMI");
+            list = (ListInterface) Naming.lookup("rmi://127.0.0.1/ListRMI");
         } catch (MalformedURLException | NotBoundException | RemoteException e) {
             throw new RuntimeException(e);
         }

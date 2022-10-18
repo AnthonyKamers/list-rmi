@@ -1,9 +1,9 @@
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-public interface ListInterface<E> extends Remote {
-    public void add(int index, E value);
-    public E get (int index);
-    public E remove(int index);
-    public int size();
+public interface ListInterface extends Remote {
+    public void add(int index, int value) throws RemoteException;
+    public int get (int index) throws RemoteException;
+    public int remove(int index) throws RemoteException;
+    public int size() throws RemoteException;
 }
