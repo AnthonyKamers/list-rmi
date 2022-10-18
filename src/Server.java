@@ -2,7 +2,7 @@ import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 
-public class Server<E> {
+public class Server {
     public Server() {
         try {
             Naming.rebind("ListRMI", new ListRMI());

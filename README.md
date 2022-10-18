@@ -5,8 +5,12 @@
 
 Implementando uma lista compartilhada por RMI em Java
 
-Tanto Server quanto Client devem rodar
-com o comando: 
+Rodar o arquivo bash `server.sh`.
+
+Após compilar todos os arquivos com `javac *.java`, deve rodar tanto
+Client, quanto Server com os seguintes comandos:
+
 ```bash
 java -Djava.security.policy=server.policy Server
+java -Djava.security.policy=server.policy Client
 ```
