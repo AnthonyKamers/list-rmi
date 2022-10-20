@@ -1,27 +1,26 @@
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.LinkedList;
 
-public class ListRMI extends UnicastRemoteObject implements ListInterface {
-    LinkedList<Integer> list;
+public class ListRMI<E> extends UnicastRemoteObject implements ListInterface<E> {
+    LinkedList<E> list;
 
     public ListRMI() throws RemoteException {
         list = new LinkedList<>();
     }
 
     @Override
-    public void add(int index, int value) throws RemoteException {
+    public void add(int index, E value) throws RemoteException {
         list.add(index, value);
     }
 
     @Override
-    public int get (int index) throws RemoteException {
+    public E get (int index) throws RemoteException {
         return list.get(index);
     }
 
     @Override
-    public int remove(int index) throws RemoteException {
+    public E remove(int index) throws RemoteException {
         return list.remove(index);
     }
 
